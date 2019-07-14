@@ -1,4 +1,9 @@
-## Welcome to GitHub Pages
+## IOST command documentation
+
+IOST is a multi-purpose Blockchain that uses a terminal command line to run actions to the blockchain. This website provides a guide to the most used commands.
+
+For more information on the IOST Blockchain go to: https://iost.io
+
 
 You can use the [editor on GitHub](https://github.com/eosvenezuela/iost-commands/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
 

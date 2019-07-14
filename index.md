@@ -4,104 +4,102 @@ IOST is a multi-purpose Blockchain that uses a terminal command line to run acti
 
 Instructions on how to build an IOST node can be found here: [developers.iost.io](https://developers.iost.io/docs/en/1-getting-started/Overview.html)
 
-# Commands
-
-## transfer
+### transfer
 ````
 iwallet --account <YOURACCOUNT> call 'token.iost' 'transfer' '["iost","<YOURACCOUNT>","<RECEIVERACCOUNT>","1","1 iost"]'
 ````
-## account create
+### account create
 ````
 docker-compose exec iserver ./iwallet --account <YOURACCOUNT> --amount_limit "ram:1000|iost:10" account create <NEWRACCOUNT> --initial_balance 1 --initial_gas_pledge 10 --initial_ram 10
 ````
-## check balance
+### check balance
 ````
 docker-compose exec iserver ./iwallet balance <YOURACCOUNT>
 ````
-## import 
+### import key
 ````
 docker-compose exec iserver ./iwallet account import <YOURACCOUNT> <YOURPRIVATEKEY>
 ````
-## buy ram
+### buy ram
 ````
 docker-compose exec iserver ./iwallet --account <YOURACCOUNT> call 'ram.iost' 'buy' '["<YOURACCOUNT>","<RECEIVERCCOUNT>",500]' --amount_limit '*:unlimited' --chain_id 1024
 ````
 
-## check state
+### check state
 ````
 docker-compose exec iserver ./iwallet state
 ````
-## pledge gas
+### pledge gas
 ````
 docker-compose exec iserver ./iwallet --account <YOURACCOUNT> call 'gas.iost' 'pledge' '["<YOURACCOUNT>", "<RECEIVERACCOUNT>", "100"]'
 ````
-## unpledge gas
+### unpledge gas
 ````
 docker-compose exec iserver ./iwallet --account iostvnzla call 'gas.iost' 'unpledge' '["iostvnzla", "iostvnzla", "10"]'
 ````
-## get key
+### get key
 ````
 docker-compose exec iserver ./iwallet key
 ````
-## Register a servi-node
+### Register a servi-node
 ````
 docker-compose exec iserver ./iwallet --account <YOURACCOUNT> call 'vote_producer.iost' 'applyRegister' '["<PRODUCERNAME>","<PUBLICKEY>","<LOCATION>","<WEBSITE>","<NODEID>",true]' --amount_limit '*:unlimited'
 ````
-## update-producer
+### update-producer
 ````
 docker-compose exec iserver ./iwallet --account <YOURACCOUNT> call 'vote_producer.iost' 'updateProducer' '["<PRODUCERNAME>","<PUBLICKEY>","<LOCATION>","<WEBSITE>","<NODEID>"]'
 ````
-## start producer - log in
+### start producer - log in
 ````
 docker-compose exec iserver ./iwallet --account <YOURACCOUNT> call 'vote_producer.iost' 'logInProducer' '["<YOURACCOUNT>"]' --amount_limit '*:unlimited'
 ````
-## stop producer
+### stop producer
 ````
 docker-compose exec iserver ./iwallet --account <YOURACCOUNT> call 'vote_producer.iost' 'logOutProducer' '["<YOURACCOUNT>"]' --amount_limit '*:unlimited'
 ````
 
-## vote producer
+### vote producer
 ````
 docker-compose exec iserver ./iwallet --account <YOURACCOUNT> call "vote_producer.iost" "vote" '["venezuela","venezuela","80000"]'
 ````
-## unvote producer 
+### unvote producer 
 ````
 docker-compose exec iserver ./iwallet --account <YOURACCOUNT> call "vote_producer.iost" "unvote" '["venezuela","venezuela","1"]'
 ````
-## claim rewards
+### claim rewards
 ````
 docker-compose exec iserver ./iwallet --account <YOURACCOUNT> sys producer-redeem 6367
 ````
-## check unclaimed balance
+### check unclaimed balance
 ````
 http://95.216.114.172:30001/getTokenBalance/<YOURACCOUNT>/contribute/1
 ````
 
-## check node score
+### check node score
 ````
 curl http://95.216.114.172:30001/getContractStorage -d '{"id":"vote_producer.iost","key":"producerScores"}'
 ````
-## get chain info
+### get chain info
 ````
 http://YOURIP:30001/getChainInfo
 ````
-## enter the docker
+### enter the docker
 ````
 docker-compose exec iserver bash
 ````
-## logs
+### logs
 ````
 docker-compose logs --tail 100 iserver
 ````
-## withdraw producer vote bonus
+### withdraw producer vote bonus
 ````
 docker-compose exec iserver ./iwallet --account <YOURACCOUNT> sys producer-withdraw
 ````
-## withdraw voter bonus
+### withdraw voter bonus
 ````
 docker-compose exec iserver ./iwallet --account <YOURACCOUNT> sys voter-withdraw
 ````
-## check node version
+### check node version
 ````
 docker exec -it iserver iwallet state | grep -E "codeVersion|gitHash"
 ````

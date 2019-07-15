@@ -104,7 +104,9 @@ docker-compose exec iserver ./iwallet --account <YOURACCOUNT> sys voter-withdraw
 docker exec -it iserver iwallet state | grep -E "codeVersion|gitHash"
 ````
 <br>
-# Made with :heart: by IOST VENEZUELA
+<br>
+
+**Made with :heart: by IOST VENEZUELA**
 
 This website is maintainned by IOST Venezuela, a Servi Node Candidate for the IOST Blockchain, a new consensus algorithm powered chain with the possibilities to unleash a whole new dimension of this technology. IOST Venezuela works to use these opportunities to build the future we all want!
 

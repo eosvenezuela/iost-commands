@@ -106,8 +106,8 @@ docker exec -it iserver iwallet state | grep -E "codeVersion|gitHash"
 <br>
 <br>
 
-**Made with :heart: by IOST VENEZUELA**
+# IOST VENEZUELA
 
-This website is maintainned by IOST Venezuela, a Servi Node Candidate for the IOST Blockchain, a new consensus algorithm powered chain with the possibilities to unleash a whole new dimension of this technology. IOST Venezuela works to use these opportunities to build the future we all want!
+This website is maintainned by IOST Venezuela :heart:, a Servi Node Candidate for the IOST Blockchain, a new consensus algorithm powered chain with the possibilities to unleash a whole new dimension of this technology. IOST Venezuela works to use these opportunities to build the future we all want!
 
 Find out more about us here: [iostvenezuela.io](https://eosvenezuela.io/IOSTVenezuela.html)

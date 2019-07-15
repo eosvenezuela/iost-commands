@@ -60,7 +60,7 @@ docker-compose exec iserver ./iwallet --account <YOURACCOUNT> call 'vote_produce
 
 ### vote producer
 ````
-docker-compose exec iserver ./iwallet --account <YOURACCOUNT> call "vote_producer.iost" "vote" '["venezuela","venezuela","80000"]'
+docker-compose exec iserver ./iwallet --account <YOURACCOUNT> call "vote_producer.iost" "vote" '["<YOURACCOUNT>","venezuela","80000"]'
 ````
 ### unvote producer 
 ````
